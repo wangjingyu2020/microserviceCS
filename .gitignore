@@ -1,0 +1,17 @@
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+*.nupkg
+packages/
+
+.vs/
+*.user
+*.userosscache
+*.suo
+
+_ReSharper*/
+
+.idea/
+
+.vscode/
