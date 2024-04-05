@@ -1,9 +1,6 @@
 using Autofac.Extensions.DependencyInjection;
 using Autofac;
-using Main.Infrastructure.IOC;
-using Main.Domain.IOC;
-using Main.Infrastructure.entity;
-using MainService.API.Consul;
+using File.Domain.IOC;
 
 namespace MainService.API
 {
@@ -16,7 +13,7 @@ namespace MainService.API
             builder.Services.AddControllers();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddDbContext<TestDbContext>();
+            //builder.Services.AddDbContext<TestDbContext>();
 
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
             // Add services to the container.
@@ -26,8 +23,6 @@ namespace MainService.API
                 builder.RegisterModule(new DomainModules());
                 builder.RegisterModule(new InfrastructureModules());
             });
-
-            builder.Services.Configure<ConsulOptions>(builder.Configuration.GetSection("ConsulOptions"));
 
 
             var app = builder.Build();
@@ -55,17 +50,6 @@ namespace MainService.API
 
             app.UseSwagger();
             app.UseSwaggerUI();
-
-
-            app.UseConsulRegistry(app.Lifetime);
-
-            app.MapGet("/api/health", () =>
-            {
-                return new
-                {
-                    Message = "OK"
-                };
-            });
 
             app.Run();
         }
