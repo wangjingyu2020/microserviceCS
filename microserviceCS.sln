@@ -17,11 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainService.API", "MainServ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileService", "FileService", "{339F2735-73AB-428E-B70C-EEBBD23E05F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File.Infrastructure", "FileService\File.Infrastructure\File.Infrastructure.csproj", "{C9958B5F-B18D-491E-B263-6792124D574F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "File.Infrastructure", "FileService\File.Infrastructure\File.Infrastructure.csproj", "{C9958B5F-B18D-491E-B263-6792124D574F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File.Domain", "FileService\File.Domain\File.Domain.csproj", "{26ED2FB9-5807-4554-B37D-4DE24B973E9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "File.Domain", "FileService\File.Domain\File.Domain.csproj", "{26ED2FB9-5807-4554-B37D-4DE24B973E9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileService.API", "FileService\FileService.API\FileService.API.csproj", "{E6A2B475-BF44-410E-ACD4-523D8420E612}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileService.API", "FileService\FileService.API\FileService.API.csproj", "{E6A2B475-BF44-410E-ACD4-523D8420E612}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{291AA0C2-22F3-4424-B798-0904A35FBF6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway\Gateway.csproj", "{78D2EB45-C29A-47C5-9813-A65AF335AC34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,10 @@ Global
 		{E6A2B475-BF44-410E-ACD4-523D8420E612}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6A2B475-BF44-410E-ACD4-523D8420E612}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6A2B475-BF44-410E-ACD4-523D8420E612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D2EB45-C29A-47C5-9813-A65AF335AC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D2EB45-C29A-47C5-9813-A65AF335AC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D2EB45-C29A-47C5-9813-A65AF335AC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D2EB45-C29A-47C5-9813-A65AF335AC34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +77,7 @@ Global
 		{C9958B5F-B18D-491E-B263-6792124D574F} = {339F2735-73AB-428E-B70C-EEBBD23E05F2}
 		{26ED2FB9-5807-4554-B37D-4DE24B973E9A} = {339F2735-73AB-428E-B70C-EEBBD23E05F2}
 		{E6A2B475-BF44-410E-ACD4-523D8420E612} = {339F2735-73AB-428E-B70C-EEBBD23E05F2}
+		{78D2EB45-C29A-47C5-9813-A65AF335AC34} = {291AA0C2-22F3-4424-B798-0904A35FBF6E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5EC159CF-498A-476F-8351-A67C8685E0B8}

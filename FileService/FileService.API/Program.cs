@@ -1,6 +1,7 @@
 using Autofac.Extensions.DependencyInjection;
 using Autofac;
 using File.Domain.IOC;
+using FileService.API.Consul;
 
 namespace MainService.API
 {
@@ -24,6 +25,7 @@ namespace MainService.API
                 builder.RegisterModule(new InfrastructureModules());
             });
 
+            builder.Services.Configure<ConsulOptions>(builder.Configuration.GetSection("ConsulOptions"));
 
             var app = builder.Build();
 
@@ -50,6 +52,16 @@ namespace MainService.API
 
             app.UseSwagger();
             app.UseSwaggerUI();
+
+            app.UseConsulRegistry(app.Lifetime);
+
+            app.MapGet("/api/health", () =>
+            {
+                return new
+                {
+                    Message = "OK"
+                };
+            });
 
             app.Run();
         }

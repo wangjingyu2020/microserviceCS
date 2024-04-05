@@ -2,7 +2,7 @@
 using log4net;
 using Microsoft.Extensions.Options;
 
-namespace MainService.API.Consul
+namespace Gateway.Consul
 {
     public static class ConsulRegistryExtensions
     {

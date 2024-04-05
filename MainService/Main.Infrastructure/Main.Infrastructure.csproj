@@ -6,9 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Consul" Version="1.7.14.3" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\CommonLib\CommonLib.csproj" />
